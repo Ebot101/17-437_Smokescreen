@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netkick UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: white;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .screen {
+            width: 300px;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+        }
+        .landing {
+            background: linear-gradient(to bottom, lightblue, darkblue);
+        }
+        .progress {
+            background: lightblue;
+            color: black;
+        }
+        .games {
+            background: darkblue;
+        }
+        .landing input, .landing button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .landing button {
+            background-color: #6200ea;
+            color: white;
+            cursor: pointer;
+        }
+        .progress-bar {
+            background: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 10px;
+            margin: 5px 0;
+        }
+        .progress .progress-bar .progress {
+            background: #03dac6;
+            height: 100%;
+        }
+        .game-card {
+            background: #292929;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #bb86fc;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .black-card {
+            background: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Screen - Landing Page -->
+        <div class="screen landing">
+            <h1>Netkick</h1>
+            <p>Your game, redefined.</p>
+            <label for="email">Enter email for mailing list</label>
+            <input type="email" id="email" placeholder="Your email">
+            <button>Submit</button>
+        </div>
+
+        <!-- Middle Screen - Track Progress -->
+        <div class="screen progress">
+            <header>
+                <button>Track Progress</button>
+                <button>Find Games</button>
+                <div class="profile-pic"></div>
+            </header>
+            <h2>Track Progress</h2>
+            <div class="card">
+                <p>Passing</p>
+                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                <span>15/20</span>
+            </div>
+            <h3>Potential Plans</h3>
+            <div class="black-card">
+                <p>Shooting</p>
+            </div>
+        </div>
+
+        <!-- Right Screen - Games Near You -->
+        <div class="screen games">
+            <h2>Games near you</h2>
+            <div class="game-card">
+                <h3>CMU Soccer Field</h3>
+                <p>Pittsburgh, PA</p>
+                <p>Skill level: 50+ | # of players: 11</p>
+            </div>
+            <div class="game-card">
+                <h3>Schenley Park Soccer Field</h3>
+                <p>Pittsburgh, PA</p>
+            </div>
+            <button>Book Now</button>
+        </div>
+    </div>
+</body>
+</html>
